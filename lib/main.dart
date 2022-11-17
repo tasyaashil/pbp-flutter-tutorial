@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:contohapp/form.dart';
+import 'package:contohapp/page/form.dart';
+import 'package:contohapp/page/to_do_page.dart';
 
 
 void main() {
@@ -126,9 +127,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
               ),
+              ListTile(
+              title: const Text('To Do'),
+              onTap: () {
+                  // Route menu ke halaman to do
+                  Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToDoPage()),
+                  );
+                },
+              ),
             ],
           ),
+          
         ),
+        
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
